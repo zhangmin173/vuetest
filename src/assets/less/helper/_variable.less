@@ -1,0 +1,92 @@
+// 黑色系
+@000: #000;
+@222: #222;
+@333: #333;
+@555: #555;
+@777: #777;
+@999: #999;
+@eee: #eee;
+@ddd: #ddd;
+@8a: #8a8a8a;
+@d4: #d4d4d4;
+@f8: #f8f8f8;
+@6e: #6e6e6e;
+@f2: #f2f2f2;
+
+// 主色系
+@primary: #2b9d71;
+@success: #8CC152;
+@info: #3BAFDA;
+@warning: #F6BB42;
+@danger: #e7334b;
+
+// 全局色
+@body-bg: @f2; // 背景颜色
+@text-color: @333;  // 字体颜色
+@border-color: @eee; // 边框颜色
+@border-width: 1px; // 边框宽度
+
+@title-color: @333; // 标题颜色
+@intro-color: @999; // 简介颜色
+@content-color: @333; // 正文颜色
+@tip-color: @8a; // 提示说明类颜色
+
+// 全局字体
+@font-family-base:        sans-serif;
+@font-size-base:          14px;
+@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
+@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
+@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
+@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+@line-height-base:        1.428571429; // 20/14
+@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
+@headings-font-family:    inherit;
+@headings-font-weight:    500;
+@headings-line-height:    1.1;
+@headings-color:          @333;
+@headings-small-color:    @555;
+
+// WeUI页面层级
+@z-index-content: 1; // 内容层，承载页面主要内容
+@z-index-navigation: 100; // 导航层，位于内容层之上，在用户滑动内容层时可保持位置不动，通常用于承载导航栏等需要固定在页面的元素
+@z-index-mask: 1000; // 蒙层，配合Popout层使用，用于锁定内容层和导航层操作，不单独使用
+@z-index-popout: 2000; // 弹出层，作为内容层和导航层的补充，用于承载弹窗通知、操作菜单、菜单、成功或加载中等状态的Toast，表单报错提示等弹出内容
+@z-index-top: 3000; // 最高层级
+
+// 字体大小
+@tx-20: 20px;
+@tx-18: 18px;
+@tx-16: 16px;
+@tx-14: 14px;
+@tx-13: 13px;
+@tx-12: 12px;
+@tx-11: 11px;
+@tx-10: 10px;
+
+
+// pop
+@pop-mask-color: rgba(0,0,0,.3); // mask颜色
+@pop-index: @z-index-mask; // 层级
+@pop-w: 90%; // 弹窗页面宽度占比
+@pop-title-size: .36rem; // 标题大小
+@pop-title-color: #333; // 标题颜色
+@pop-msg-size: .36rem; // 信息大小
+@pop-msg-color: #999; // 信息颜色
+@pop-guter: .25rem; // 空间大小
+@pop-radius: 8px; // 圆角
+@pop-border-color: #eee; // 边框颜色
+@pop-btn-h: 1rem; // 按钮高度
+@pop-btn-size: .32rem; // 按钮文字大小
+@pop-btn-color: #333; // 普通按钮颜色
+@pop-btn-confirm-color: @primary; // 确定按钮颜色
+
+// header
+@header-bg-color: #555; // header背景色
+@header-btn-color: #fff; // 左右按钮颜色
+@header-btn-w: 1rem; // 左右按钮宽度
+@header-title-color: #fff; // 标题颜色
+@header-title-size: .36rem; // 标题大小
