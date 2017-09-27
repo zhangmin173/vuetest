@@ -15,11 +15,11 @@ export default {
         return [
           {
             name: '首页',
-            url: '##'
+            url: '/'
           },
           {
             name: '我的',
-            url: '##'
+            url: '/my'
           }
         ]
       }
