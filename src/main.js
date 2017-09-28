@@ -11,5 +11,7 @@ new Vue({
   el: '#app',
   router,
   template: '<Layout/>',
-  components: { Layout }
+  components: {
+    Layout
+  }
 })

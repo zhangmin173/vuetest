@@ -30,7 +30,7 @@ export default {
       default: false
     }
   },
-  data () {
+  data() {
     return {
       numbers: this.nums
     }
@@ -38,11 +38,11 @@ export default {
   methods: {
     tap: function(e) {
       this.numbers.push(parseInt(e.target.dataset.num))
-      this.$emit('keychange',this.numbers)
+      this.$emit('keychange', this.numbers)
     },
     del: function() {
       this.numbers.pop()
-      this.$emit('keychange',this.numbers)
+      this.$emit('keychange', this.numbers)
     }
   },
 }
@@ -50,31 +50,32 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
-	@import url('../assets/less/helper/_variable.less');
-	
-  .keyboard {
-    background-color: #fff;
+@import url('../assets/less/helper/_variable.less');
 
-    .keyboard-item {
-      display: inline-block;
-      box-sizing: border-box;
-      width: 33.3333%;
-      height: @keyboard-h;
-      line-height: @keyboard-h;
-      float: left;
-      text-align: center;
-      font-size: @keyboard-tx-size;
-      color: @keyboard-tx-color;
-      border-right: .01rem solid @keyboard-border-color;
-      border-bottom: .01rem solid @keyboard-border-color;
+.keyboard {
+  background-color: #fff;
 
-      &:nth-child(3n) {
-        border-right-color: transparent;
-      }
+  .keyboard-item {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 33.3333%;
+    height: @keyboard-h;
+    line-height: @keyboard-h;
+    float: left;
+    text-align: center;
+    font-size: @keyboard-tx-size;
+    color: @keyboard-tx-color;
+    border-right: .01rem solid @keyboard-border-color;
+    border-bottom: .01rem solid @keyboard-border-color;
 
-      &:nth-child(10),&:nth-child(12) {
-        background-color: @keyboard-bg-color;
-      }
+    &:nth-child(3n) {
+      border-right-color: transparent;
+    }
+
+    &:nth-child(10),
+    &:nth-child(12) {
+      background-color: @keyboard-bg-color;
     }
   }
+}
 </style>

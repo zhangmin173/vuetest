@@ -11,11 +11,11 @@ export default {
   components: {
     vPop,
   },
-  data () {
+  data() {
     return {
       title: '系统提示',
       msg: '确定要删除吗?',
-      btns: ['确定','算了'],
+      btns: ['确定', '算了'],
       isShowPop: false,
     }
   },
@@ -35,17 +35,15 @@ export default {
 }
 </script>
 <style lang="less">
-  body {
-    padding-top: 98px;
-  }
+body {
+  padding-top: 98px;
+}
 </style>
 <style lang="less" scoped>
-	
-	button {
-    width: 1rem;
-    height: .5rem;
-    text-align: center;
-    line-height: .5rem;
-  }
-
+button {
+  width: 1rem;
+  height: .5rem;
+  text-align: center;
+  line-height: .5rem;
+}
 </style>

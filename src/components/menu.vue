@@ -11,7 +11,7 @@ export default {
   props: {
     btns: {
       type: Array,
-      default: function () {
+      default: function() {
         return [
           {
             name: '首页',
@@ -28,9 +28,9 @@ export default {
   components: {
     headroom
   },
-  data () {
+  data() {
     return {
-      
+
     }
   },
   methods: {
@@ -41,24 +41,24 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
-	@import url('../assets/less/helper/_variable.less');
-  
-  .menu {
-    display: flex;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 1.28rem;
-    line-height: 1.28rem;
-    background-color: #555;
+@import url('../assets/less/helper/_variable.less');
 
-    .menu-item {
-      flex: 1;
-      display: inline-block;
-      height: 100%;
-      text-align: center;
-      color: #fff;
-    }
+.menu {
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1.28rem;
+  line-height: 1.28rem;
+  background-color: #555;
+
+  .menu-item {
+    flex: 1;
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    color: #fff;
   }
+}
 </style>

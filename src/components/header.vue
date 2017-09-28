@@ -28,7 +28,7 @@ export default {
   components: {
     headroom
   },
-  data () {
+  data() {
     return {
       h: '1.2rem'
     }
@@ -50,41 +50,41 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
-	@import url('../assets/less/helper/_variable.less');
-  
-  .header {
-    position: relative;
+@import url('../assets/less/helper/_variable.less');
+
+.header {
+  position: relative;
+  height: 100%;
+  background-color: @header-bg-color;
+
+  .header-btn {
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    width: @header-btn-w;
     height: 100%;
-    background-color: @header-bg-color;
+    text-align: center;
+    text-decoration: none;
+    color: @header-btn-color;
 
-    .header-btn {
-      position: absolute;
-      top: 0;
-      display: inline-block;
-      width: @header-btn-w;
-      height: 100%;
-      text-align: center;
-      text-decoration: none;
-      color: @header-btn-color;
-
-      &.header-left {
-        left: 0;
-      }
-
-      &.header-right {
-        right: 0;
-      }
+    &.header-left {
+      left: 0;
     }
 
-    .header-title {
-      position: absolute;
-      left: @header-btn-w;
-      right: @header-btn-w;
-      height: 100%;
-      display: inline-block;
-      text-align: center;
-      color: @header-title-color;
-      font-size: @header-title-size;
+    &.header-right {
+      right: 0;
     }
   }
+
+  .header-title {
+    position: absolute;
+    left: @header-btn-w;
+    right: @header-btn-w;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    color: @header-title-color;
+    font-size: @header-title-size;
+  }
+}
 </style>

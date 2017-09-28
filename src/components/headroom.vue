@@ -17,7 +17,7 @@ export default {
       default: 'top'
     }
   },
-  data () {
+  data() {
     return {
       translateY: 0,
       scroller: window,
@@ -27,7 +27,7 @@ export default {
     }
   },
   computed: {
-    fixedClass: function () {
+    fixedClass: function() {
       return 'fixed-' + this.fixed
     }
   },
@@ -48,7 +48,7 @@ export default {
       }
       this.lastKnownScrollY = this.getScrollY()
     },
-    getScrollY : function() {
+    getScrollY: function() {
       return (this.scroller.pageYOffset !== undefined)
         ? this.scroller.pageYOffset
         : (this.scroller.scrollTop !== undefined)
@@ -56,7 +56,7 @@ export default {
           : (document.documentElement || document.body.parentNode || document.body).scrollTop;
     }
   },
-  mounted () {
+  mounted() {
     this.scroller.addEventListener('scroll', this.handleScroll);
   }
 }
@@ -64,20 +64,20 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
-	@import url('../assets/less/helper/_variable.less');
-  .headroom {
-    position: fixed;
-    left: 0;
-    right: 0;
-    background-color: #eee;
-    transition: all .5s;
+@import url('../assets/less/helper/_variable.less');
+.headroom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: #eee;
+  transition: all .5s;
 
-    &.fixed-top {
-      top: 0;
-    }
-
-    &.fixed-bottom {
-      bottom: 0;
-    }
+  &.fixed-top {
+    top: 0;
   }
+
+  &.fixed-bottom {
+    bottom: 0;
+  }
+}
 </style>

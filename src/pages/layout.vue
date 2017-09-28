@@ -21,7 +21,7 @@ export default {
     vHeader,
     vMenu
   },
-  data () {
+  data() {
     return {
       headerTitle: '导航标题',
       msg: 'Welcome to Your Vue.js App'
@@ -31,9 +31,9 @@ export default {
 </script>
 
 <style lang="less">
-  @import url('../assets/less/helper/_variable.less');
-  body {
-    font-family: 'Heiti SC','\9ED1\4F53',SimHei,'黑体';
-    height: 10000px;
-  }
+@import url('../assets/less/helper/_variable.less');
+body {
+  font-family: 'Heiti SC', '\9ED1\4F53', SimHei, '黑体';
+  height: 10000px;
+}
 </style>

@@ -23,25 +23,26 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
-	@import url('../assets/less/helper/_variable.less');
-	.pop-mask {
-    position: fixed;
-    z-index: @pop-index;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: @pop-mask-color;
-  }
-  .tip-main {
-    position: fixed;
-    z-index: @pop-index;
-    left: 50%;
-    top: 50%;
-    width: @pop-w;
-    transform: translate(-50%,-50%);
-    background-color: #000;
-    text-align: center;
-    color: #fff;
-  }
+@import url('../assets/less/helper/_variable.less');
+.pop-mask {
+  position: fixed;
+  z-index: @pop-index;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: @pop-mask-color;
+}
+
+.tip-main {
+  position: fixed;
+  z-index: @pop-index;
+  left: 50%;
+  top: 50%;
+  width: @pop-w;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  text-align: center;
+  color: #fff;
+}
 </style>

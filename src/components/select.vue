@@ -38,7 +38,7 @@ export default {
       default: false
     }
   },
-  data () {
+  data() {
     return {
       numbers: this.nums
     }
@@ -46,11 +46,11 @@ export default {
   methods: {
     tap: function(e) {
       this.numbers.push(parseInt(e.target.dataset.num))
-      this.$emit('keychange',this.numbers)
+      this.$emit('keychange', this.numbers)
     },
     del: function() {
       this.numbers.pop()
-      this.$emit('keychange',this.numbers)
+      this.$emit('keychange', this.numbers)
     }
   },
 }
@@ -58,52 +58,54 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
-	@import url('../assets/less/helper/_variable.less');
-	
-  .select-mask {
-    position: fixed;
-    z-index: @select-index;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: @select-mask-color;
+@import url('../assets/less/helper/_variable.less');
+
+.select-mask {
+  position: fixed;
+  z-index: @select-index;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: @select-mask-color;
+}
+
+.select-main {
+  position: fixed;
+  z-index: @select-index;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f2f2f2;
+
+  &.fade-enter-active,
+  &.fade-leave-active {
+    transition: all .5s ease
   }
-  .select-main {
-    position: fixed;
-    z-index: @select-index;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #f2f2f2;
 
-    &.fade-enter-active, &.fade-leave-active {
-      transition: all .5s ease
-    }
-       
-    &.fade-enter, &.fade-leave-to {
-      opacity: 0
-    } 
+  &.fade-enter,
+  &.fade-leave-to {
+    opacity: 0
+  }
 
-    .select-title {
+  .select-title {
+    height: @select-h;
+    line-height: @select-h;
+    background-color: #fff;
+    font-size: @select-title-size;
+    color: @select-title-color;
+    text-align: center;
+  }
+
+  .select-area {
+    height: 2*@select-h;
+    overflow-y: auto;
+
+    .select-item {
       height: @select-h;
       line-height: @select-h;
       background-color: #fff;
-      font-size: @select-title-size;
-      color: @select-title-color;
-      text-align: center;
     }
-
-    .select-area {
-      height: 2*@select-h;
-      overflow-y: auto;
-
-      .select-item {
-        height: @select-h;
-        line-height: @select-h;
-        background-color: #fff;
-      }
-    }
-    
   }
+}
 </style>
